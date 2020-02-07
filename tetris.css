@@ -1,0 +1,147 @@
+body{
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    background-image: url('BackGround/Background.jpg');
+    background-size: cover;
+    background-position: 50%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.body{
+    display: none;
+}
+
+.posicion{
+    flex: 1 1 auto;
+}
+.posicion_derecha{
+    text-align: right;
+}
+
+canvas#tetris {
+    border: solid .2em #ffffff;
+    border-radius: 5px;
+    height: 90vh;
+    margin-left: 150%;
+    margin-top: 30px;
+}
+.caja_lateral{
+    border: solid .2em #ffffff;
+    margin-bottom: 20px;
+    max-width: 200px;
+    margin-left: 70%;
+    background-color: black;
+    top: 30px;
+    position: relative;
+}
+canvas#proximaPieza{
+    width: 100%;
+    color: black;
+    text-decoration: blue;
+}
+
+div.boton_group{
+    width: 100%;
+    max-width: 213px;
+}
+
+BUTTON{
+    width: 100%;
+    font-size: 1em;
+    border: solid 1px #333;
+    color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+button.pausa{
+    left: 354.5%;
+    bottom: 40px;
+}
+button.reiniciar{
+    left: 5px;
+    height: 33%;
+    top: 38px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(93,179,52,1) 100%);
+}
+button.salir{
+    right: 5px;
+    height: 33%;
+    top: 38px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(93,179,52,1) 100%);
+}
+button.jugar{
+    color: rgb(21, 0, 214);
+    background-color: rgba(207, 204, 13, 0.904);
+    width: 170px;
+    height: 45px;
+    top: 50%;
+    left: 30%;
+}
+button.completa{
+    width: 140px;
+    height: 80px;
+    right: 640px;
+    bottom: 140px;
+}
+button.ventana{
+    width: 140px;
+    height: 80px;
+    right: 785px;
+    bottom: 40px;
+}
+DIV.background_tetris{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,0,0,0.7);
+}
+div.UI-Pausa{
+    border-radius: 10px;
+    padding: 25px;
+    position: fixed;
+    top: 43%;
+    left: 44.5%;
+    width: 350px;
+    height: 150px;
+    margin-top: -50px;
+    margin-left: -150px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(194,15,162,1) 30%, rgba(0,212,255,1) 100%);
+    box-shadow: 0 8px -6px black;
+    display: none;
+}
+div.UI-Menu{
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    width: 300px;
+    height: 200px;
+    margin-left: -150px;
+    margin-top: -100px;
+}
+
+div.titulo_menu{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    color: rgb(223, 235, 114);
+    text-shadow: 1px 1px white, -1px #444;
+}
+div.boton_izquierda{
+    float: left;
+    width:145px;
+    padding-right: 5px;
+}
+div.boton_derecha{
+    float: right;
+    width:145px;
+    padding-left: 5px;
+}

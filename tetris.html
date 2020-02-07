@@ -1,16 +1,65 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="tetris.css">
     <title>Tetris</title>
 </head>
+
 <body>
-    <div id= puntaje></div>
-    <div id=lineas></div>
-    <div id="nivel"></div>
-    <canvas id="proximaPieza" width="100" height="100"></canvas>
-    <canvas id="tetris" width="200" height="400"></canvas>
+    <div id="background_tetris" class="background_tetris">
+
+        <div id="UI-Menu" class="UI-Menu">
+            <button onclick="iniciarJuego()" class="jugar">JUGAR</button>
+        </div>
+
+        <div id="UI-Pausa" class="UI-Pausa">
+            <div class="titulo_menu">PAUSA</div>
+            <div class="boton_izquierda">
+                <button onclick='pausar(false)' class="reiniciar">VOLVER</button>
+            </div>
+            <div class="boton_derecha">
+                <button onclick='terminarJuego()' class="salir">SALIR</button>
+            </div>
+        </div>
+
+        <br clear="all">
+    </div>
+    </div>
+
+    <div id="body" class="body">
+        <div class="posicion_derecha">
+            <canvas id="tetris" width="200" height="400"></canvas>
+        </div>
+        <div class="posicion">
+            <div class="caja_lateral">
+                PROXIMA
+                <canvas class="proximaPieza" id="proximaPieza" width="100" height="100"></canvas>
+            </div>
+            <div class="caja_lateral">
+                PUNTOS
+                <div id=puntaje></div>
+            </div>
+            <div class="caja_lateral">
+                LINEAS
+                <div id=lineas></div>
+            </div>
+            <div class="caja_lateral">
+                NIVEL
+                <div id="nivel"></div>
+            </div>
+            <div class="caja_izquierda">
+                <button class="completa" onclick="openFullscreen(document.documentElement);"> Pantalla completa </button>
+                <button class="ventana" onclick="closeFullscreen();"> Salir pantalla completa </button>
+            </div>
+            <div class="boton_group">
+                <button id="pausa" onclick= 'pausar(true)' class="pausa">PAUSA</button>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="tetris.js"></script>
+
 </html>
